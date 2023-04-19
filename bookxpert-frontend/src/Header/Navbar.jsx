@@ -27,12 +27,13 @@ import axios from "axios";
 // import Login from "../components/Login/Login";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import "./navbar.css"
 
 
 
 
 export default function MainNavbar() {
+  
 
   const { isOpen, onToggle } = useDisclosure();
   const toast=useToast()
@@ -354,7 +355,6 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Home",
-    href: "https://bookxpert.co.in/index.html#services",
   },
 
   {
@@ -362,7 +362,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: "FEATURED",
-        href: "https://bookxpert.co.in/index.html#services",
+        href: "/kml",
       },
       {
         label: "SHOP BY CATEGORY",
