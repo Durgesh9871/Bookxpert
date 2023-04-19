@@ -206,7 +206,7 @@ console.log(location ,"location")
   return (
     <Stack direction={"row"} spacing={4} align="center">
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label} color={(location.pathname == "/" && navItem.label == "Home" && "#05a0e8" )} >
+        <Box key={navItem.label} color={(location.pathname == "/" && navItem.label == "Home" && "#05a0e8" )} fontWeight={(location.pathname == "/" && navItem.label == "Home" && "500" )} >
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
