@@ -201,19 +201,19 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
   const location = useLocation()
  
-
+console.log(location ,"location")
 
   return (
     <Stack direction={"row"} spacing={4} align="center">
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label}>
+        <Box key={navItem.label} color={(location.pathname == "/" && navItem.label == "Home" && "#05a0e8" )} >
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
                 to="/"
                 fontSize={"sm"}
                 fontWeight={500}
-                color={ linkColor}
+                color={linkColor}
                 
                 _hover={{
                   textDecoration: "none",
@@ -256,6 +256,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("yellow", "gray.900") }}
+      
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
@@ -263,10 +264,11 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
             transition={"all .3s ease"}
             _groupHover={{ color: "#05a0e8" }}
             fontWeight={500}
+            color="gray.600"
           >
             {label}
           </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+          <Text fontSize={"sm"} >{subLabel}</Text>
         </Box>
         <Flex
           transition={"all .3s ease"}
