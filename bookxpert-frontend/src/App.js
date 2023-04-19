@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from './Header_Footer/Navbar';
+import  MainNavbar  from './Header/Navbar';
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-        <Navbar />
+       <MainNavbar />
     </div>
   );
 }
