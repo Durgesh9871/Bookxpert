@@ -14,7 +14,6 @@ import {Box,Flex,
   Modal,
   useToast,
 } from "@chakra-ui/react";
-import {  BsHandbagFill } from "react-icons/bs";
 import {
   HamburgerIcon,
   CloseIcon,
@@ -34,6 +33,7 @@ import { Link } from "react-router-dom";
 
 
 export default function MainNavbar() {
+
   const { isOpen, onToggle } = useDisclosure();
   const toast=useToast()
   // const isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
@@ -74,6 +74,9 @@ const isAdmin=true
     }
    }
 
+
+  
+
   return (
     <Box
       boxSizing="border-box"
@@ -113,9 +116,9 @@ const isAdmin=true
           />
         </Flex>
         <Flex justify={{ base: "center", md: "center" }}>
-          <Link to="/">
-            <Image src={image} h="60px" w="80px" borderRadius={"5%"} border="2px  red"></Image>
-          </Link>
+         
+        <a target={"_blank"} href="https://bookxpert.co.in/index.html#services">  <Image src={image} h="60px" w="80px" borderRadius={"5%"} border="2px  red" ></Image> </a>
+         
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "center" }}>
           <Flex
@@ -207,7 +210,7 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 //   p={2}
-                to="/products"
+                to="/"
                 fontSize={"sm"}
                 fontWeight={500}
                 color={ linkColor}
@@ -252,13 +255,13 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      _hover={{ bg: useColorModeValue("yellow", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "#05529aeb" }}
+            _groupHover={{ color: "#05a0e8" }}
             fontWeight={500}
           >
             {label}
@@ -274,7 +277,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"#05a0e8"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -351,6 +354,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Home",
+    href: "https://bookxpert.co.in/index.html#services",
   },
 
   {
@@ -358,7 +362,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: "FEATURED",
-        href: "/products",
+        href: "https://bookxpert.co.in/index.html#services",
       },
       {
         label: "SHOP BY CATEGORY",
