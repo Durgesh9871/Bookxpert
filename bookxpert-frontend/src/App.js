@@ -1,11 +1,15 @@
 import React from 'react';
+import { Navbar } from './Header_Footer/Navbar';
+
+
+
+
+
 function App() {
 
-  
-  
   return (
     <div>
-  hello world Bookxpert
+        <Navbar />
     </div>
   );
 }
