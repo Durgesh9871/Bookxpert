@@ -82,7 +82,7 @@ const isAdmin=true
     <Box
       boxSizing="border-box"
       background={"transparent"}
-      maxW="98vw"
+      maxW="99vw"
       m="auto"
       zIndex={"2"}
       position="sticky"
@@ -206,7 +206,7 @@ console.log(location ,"location")
   return (
     <Stack direction={"row"} spacing={4} align="center">
       {NAV_ITEMS.map((navItem) => (
-        <Box key={navItem.label} color={(location.pathname == "/" && navItem.label == "Home" && "#05a0e8" )} fontWeight={(location.pathname == "/" && navItem.label == "Home" && "500" )} >
+        <Box key={navItem.label} className="navBarMain" color={(location.pathname == "/" && navItem.label == "Home" && "#05a0e8" ) || (location.pathname == "/about" && navItem.label == "About Us" && "#05a0e8" )} fontWeight={(location.pathname == "/" && navItem.label == "Home" && "500" )} >
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
