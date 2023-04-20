@@ -118,7 +118,7 @@ const isAdmin=true
         </Flex>
         <Flex justify={{ base: "center", md: "center" }}>
          
-        <a target={"_blank"} href="https://bookxpert.co.in/index.html#services">  <Image src={image} h="60px" w="80px" borderRadius={"5%"} border="2px  red" ></Image> </a>
+        <a target={"_blank"} href="https://bookxpert.co.in/index.html#services">  <Image src={image} h="60px" w="85px" borderRadius={"5%"} border="2px  red" ></Image> </a>
          
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "center" }}>
