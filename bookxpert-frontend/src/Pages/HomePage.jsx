@@ -41,6 +41,17 @@ const HomePage = () => {
     lastText :"Owners eventually forget about keeping track, asking, worrying, perplexing, and losing. You will never have to bring bags containing files and directories, coupons, bills, or records since source documents can be checked instantly online." ,
   }
 
+  const Details = {
+    image:"https://images.pexels.com/photos/210990/pexels-photo-210990.jpeg?auto=compress&cs=tinysrgb&w=600" , 
+    heading :"How It Works" ,
+    textFirst :"To make you free and comfortable to do your business and help you to maximize your returns" ,
+    mainText1 :"Our solution deploys the services of team comprising of accounting, law, and technology experts( instead of a conventional single individual who is neither trained nor updated.)",
+    mainText2 :"Our specially designed app can receive all your data from your business locations eliminating the need for Physical Movement of People and Documents.(original source documents can be viewed always)" ,
+    mainText3 :"Trained operators in a dedicated call centre can enter all data into an specially designed online platform ( can provide Owners up to date MIS and Alerts helping them to take Rational and Data Driven Decisions instead of depending solely on Intuition)" ,
+   mainText4 :"Experts of accounting and compliances located in various geographical locations with special domain expertise in the Company’s Sector will validate data on a regular basis. ( a single person cannot expert in all domains)" ,
+    lastText :"Our Team ensures that data is perfect and complete before sending it for compliances & your/our professionals’ use. (Professionals’ time is reduced and reliability improves)" ,
+  }
+
   return (
     <Box border="2px  red"  >
 
@@ -91,7 +102,7 @@ const HomePage = () => {
     < Offer />
 
    {/* fifth ----------innovative component reuse -- section  */}
-   <Innovative />
+   <Innovative innovativeDetails={Details} />
 
 
     </Box>
