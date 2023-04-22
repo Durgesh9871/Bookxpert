@@ -114,7 +114,12 @@ const BlogPage = () => {
             {/*  box for blogs */}
 
             <Box>
-                <BlogBox />
+                {
+                    blogData.map((item ,i)=>{
+                        return  <BlogBox key={i} item={item} />
+                    })
+                }
+               
             </Box>
 
     </Box>

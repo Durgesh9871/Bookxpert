@@ -11,7 +11,7 @@ import {
   } from '@chakra-ui/react'
 
 
-const ReadMore = () => {
+const ReadMore = ({item}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
@@ -20,10 +20,10 @@ const ReadMore = () => {
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Modal Title</ModalHeader>
+            <ModalHeader>{item.heading}</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab eum unde sequi quis sunt soluta. Similique, minima qui dolorum omnis alias delectus? Sequi molestiae mollitia pariatur nemo. Sed, delectus deserunt.
+              {item.description}
             </ModalBody>
   
             <ModalFooter>
