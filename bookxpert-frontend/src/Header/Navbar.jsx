@@ -201,7 +201,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
   const location = useLocation()
  
-console.log(location ,"location")
+// console.log(location ,"location")
 
   return (
     <Stack direction={"row"} spacing={4} align="center">
