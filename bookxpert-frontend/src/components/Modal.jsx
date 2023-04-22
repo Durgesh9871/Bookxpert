@@ -15,7 +15,7 @@ const ReadMore = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
-        <Text color="red" fontWeight="400" mt='5px' cursor="pointer"  _hover={{textDecoration: "underline" , color:'blue' }} onClick={onOpen}>Read More...</Text>
+        <Text color="red" fontWeight="400" mt='5px' cursor="pointer" display="inline"  _hover={{textDecoration: "underline" , color:'blue' }} onClick={onOpen}>Read More...</Text>
   
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
@@ -30,7 +30,6 @@ const ReadMore = () => {
               <Button colorScheme='blue' mr={3} onClick={onClose}>
                 Close
               </Button>
-              <Button variant='ghost'>Secondary Action</Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
