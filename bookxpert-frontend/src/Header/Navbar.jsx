@@ -362,12 +362,12 @@ const NAV_ITEMS = [
     label: "About Us",
     children: [
       {
-        label: "FEATURED",
-        href: "/kml",
+        label: "About",
+        href: "/about",
       },
       {
-        label: "SHOP BY CATEGORY",
-        href: "/products",
+        label: "Contact Us",
+        href: "/contact",
       },
     ],
   },
@@ -376,46 +376,18 @@ const NAV_ITEMS = [
     label: "Blogs",
     children: [
       {
-        label: "TOPS",
-        href: "/products",
-      },
-      {
-        label: "BOTTOMS",
-        href: "/products",
-      },
-      {
-        label: "OUTERWEAR",
-        href: "/products",
-      },
-      {
-        label: "ACCESSORIES",
-        href: "/products",
-      },
-      {
-        label: "FLEECE",
-        href: "/products",
-      },
-      {
-        label: "FOOTWEAR",
-        href: "/products",
-      },
+        label: "Read Blogs",
+        href: "/blogs",
+      }
     ],
   },
   {
     label: "Services",
     children: [
       {
-        label: "BOYS",
-        href: "/products",
-      },
-      {
-        label: "GIRLS",
-        href: "/products",
-      },
-      {
-        label: "INFANT & TODDLER",
-        href: "/products",
-      },
+        label: "Our Services",
+        href: "/services",
+      }
     ],
   },
   
