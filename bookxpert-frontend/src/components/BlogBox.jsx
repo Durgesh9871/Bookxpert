@@ -1,6 +1,7 @@
 import { Box  , Heading, Image , Modal, Text} from '@chakra-ui/react'
 import React from 'react'
 import { ReadMore } from './Modal'
+import "./blog.css"
 
 
 const BlogBox = () => {
@@ -16,7 +17,7 @@ const BlogBox = () => {
        <Box  p="20px" border="1px solid red" height="auto" m="auto"  width={{base:"100%" ,xl:"1000px", "2xl":"1000px"}} backgroundColor="#f6f6f6" >
          <Heading fontWeight="500" color="#32292f" fontFamily="Arial" >Accounting </Heading>
          <Text m="10px 0px" color="orange.300">{date.toJSON().slice(0,10)}</Text>
-         <Text color="#32292f" fontWeight="400" fontSize="15px" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quod dolorem error ad consectetur ex. Facilis voluptates ipsa consequuntur porro voluptatibus labore iure molestias vel minus sed, iusto harum illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa recusandae minus, harum error dicta architecto reiciendis suscipit. Impedit, sequi doloremque.</Text>
+         <Text className='control' m="10px 0px" color="#32292f" fontWeight="400" fontSize="15px" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit quod dolorem error ad consectetur ex. Facilis voluptates ipsa consequuntur porro voluptatibus labore iure molestias vel minus sed, iusto harum illo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa recusandae minus, harum error dicta architecto reiciendis suscipit. Impedit, sequi doloremque.</Text>
        <ReadMore />
        </Box>
 
