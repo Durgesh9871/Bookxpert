@@ -9,8 +9,8 @@ import "../Header/navbar.css"
 import { Link } from 'react-router-dom'
 import { Aboutus } from '../ComponentsHome/aboutus'
 import { Innovative } from '../ComponentsHome/Innovative'
-import offer from "../Images/offer.jpg"
-import about from "../Images/aboutus.jpg"
+import {Offer} from "../ComponentsHome/offer"
+import innovative from "../Images/innovative.jpg"
 
 
 
@@ -30,7 +30,16 @@ const HomePage = () => {
    ></span> )
     }
 
-
+   const innovativeDetails = {
+    image:innovative , 
+    heading :"Innovative Solutions For Account Problems" ,
+    textFirst :"Our model is flexible enough to support individual needs and circumstances that you can outsource totally or partially:" ,
+    mainText1 :"In the current situation, a person will not able to justify the work because it needs a broad range of skills, including accounting, technology, law, patience in addition to sincerity and costs. People like this are hard to find and much harder to afford. MSMEs are unable to afford or retain talent." ,
+    mainText2 :"All of the above features are included in our solution at a low cost and with ease of use. Our online site, applications, new technology, and techniques combine to eliminate the movement of people and physical data, allowing for day-to-day operations at no expense. With our technologies and techniques, data capture is flawless and fast." ,
+    mainText3 :"A number of tests will be carried out, and deliveries will be made in a precisely planned shape and with precision. This would make life simpler for professionals, agencies, and business owners." ,
+   mainText4 :"We assign experts in your company domain compliances who operate from various locations and at various times." ,
+    lastText :"Owners eventually forget about keeping track, asking, worrying, perplexing, and losing. You will never have to bring bags containing files and directories, coupons, bills, or records since source documents can be checked instantly online." ,
+  }
 
   return (
     <Box border="2px  red"  >
@@ -74,37 +83,16 @@ const HomePage = () => {
       
       {/* third section  */}
 
-     <Innovative />
+     <Innovative innovativeDetails={innovativeDetails} />
 
       {/* Third section end here ---------- */}
 
       {/* fourth section  */}
-      <Box border="2px solid red" height="auto" width="90%" m="20px auto"  p="10px" backgroundImage={offer} color="#ffffff" >
+    < Offer />
 
-      <Heading fontWeight="400"  fontFamily="Raleway" textAlign="center">What We Offer</Heading>
-  <Text  fontWeight="400" fontSize="15px" mt="12px" textAlign="center">Our model is flexible enough to support individual needs and circumstances that you can outsource totally or partially.
- 
- {/* main section */}
- <Box width="100%" border="2px  black"  display="flex" p="10px" mt="10px"  flexDirection={{base:"column-reverse", sm: "column-reverse", md: "row", lg: "row",xl: "row",'2xl': "row"}}  >
- {/* image */}
- <Box border="1px  red" m={{base:"auto", md:"0px",lg:"0px" ,xl:"0px" ,"2xl":"0px"}} width={{base:"100%", sm: "80%", md: "50%", lg: "50%",xl: "50%",'2xl': "50%"}} p="25px" display="flex" justifyContent={{base:"center", sm: "center", md: "flex-end", lg: "flex-end",xl: "flex-end",'2xl': "flex-end"}} >
-        <Img src={about} alt="about" width="auto" height={{base:"200px", sm: "350px", md: "300px", lg: "400px",xl: "400px",'2xl': "400px"}} />
-   </Box>
-  {/* details */}
-  <Box border="1px  red" width={{base:"100%", sm: "100%", md: "50%", lg: "40%",xl: "40%",'2xl': "40%"}} p="15px" textAlign="left">
-    <ul>
-      <li><Text  fontWeight="400" fontSize="15px" >For example you can generate sales in our application at your location and the rest can be outsourced;</Text></li>
-      <li>   <Text  fontWeight="400" fontSize="15px" mt="15px" >You can demand the deliveries required and their frequency.</Text></li>
-    <li>  <Text  fontWeight="400" fontSize="15px" mt="15px">You can get the reports you need in your mobile at your fingertips; and more.</Text></li>
-   <li><Text  fontWeight="400" fontSize="15px" mt="15px">All of this without asking or waiting.</Text></li>
-    </ul>
-  </Box>
+   {/* fifth ----------innovative component reuse -- section  */}
+   <Innovative />
 
- </Box>
-
-</Text>
-
-      </Box>
 
     </Box>
   )
