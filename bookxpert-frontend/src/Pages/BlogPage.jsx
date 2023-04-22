@@ -115,7 +115,15 @@ const BlogPage = () => {
 
             <Box>
                 {
-                    blogData.map((item ,i)=>{
+                    blogData.filter((value)=>{
+                          if(searchTitle === ""){
+                          return value 
+                          }
+                          else if(value.description.toLowerCase().includes(searchTitle.toLowerCase())){
+                            return value 
+                          }
+                    })
+                    .map((item ,i)=>{
                         return  <BlogBox key={i} item={item} />
                     })
                 }
