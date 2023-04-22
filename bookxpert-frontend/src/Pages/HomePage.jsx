@@ -71,7 +71,7 @@ const HomePage = () => {
     </Carousel>
    
    {/*  Text inside carousel --------- */}
-     <Box position='absolute' shadow="base" zIndex="1"  top={{base:"68px", sm: "100px", md: "12%", lg: "15%",xl: "15%",'2xl': "17%"}} width="" right="6%" border="2px  red"  height="auto" p="15px">
+     <Box position='absolute' shadow="base" zIndex="1"  top={{base:"68px", sm: "100px", md: "180px", lg: "200px",xl: "8%",'2xl': "10%"}} width="" right="6%" border="2px  red"  height="auto" p="15px">
       <Box width={{base:"155px", sm: "240px", md: "280px", lg: "300px",xl: "320px",'2xl': "320px"}} border="2px  red">
       <Text color="#0b589e" fontSize={{base:"8px", sm: "16px", md: "18px", lg: "24px",xl: "28px",'2xl': "28px"}} fontWeight="500"  mb="-2px">Now</Text>
       <Text color="#022d54" fontSize={{base:"10px", sm: "16px", md: "24px", lg: "32px",xl: "34px",'2xl': "36px"}} fontWeight="500" mb="4px" lineHeight={{base:"16px", sm: "16px", md: "21px", lg: "35px",xl: "35px",'2xl': "35px"}}>"Fulfillment of Your dreams"</Text>
