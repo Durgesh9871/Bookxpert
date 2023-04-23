@@ -4,6 +4,7 @@ import { HomePage } from '../Pages/HomePage'
 import { About } from '../Pages/About'
 import { BlogPage } from '../Pages/BlogPage'
 import { Contact } from '../Pages/Contact'
+import { Service } from '../Pages/Service'
 
 const AllRoutes = () => {
   return (
@@ -12,7 +13,8 @@ const AllRoutes = () => {
       <Route path="/about" element={<About />} ></Route>
       <Route path="/blogs" element={<BlogPage />} ></Route>
       <Route path="/contact" element={<Contact />} ></Route>
-      
+      <Route path="/services" element={<Service />} ></Route>
+
     </Routes>
   )
 }

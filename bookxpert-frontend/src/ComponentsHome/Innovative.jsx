@@ -4,7 +4,7 @@ import { Box  , Button, Heading, Text , Img} from '@chakra-ui/react'
 const Innovative = ({innovativeDetails}) => {
   // console.log(innovativeDetails ,"js")
   return (
-    <Box border='2px  red' height="auto" width="80%" m="20px auto"  p="10px">
+    <Box  height="auto" width="80%" m="20px auto"  p="10px">
     <Heading fontWeight="400" color="#46484A" fontFamily="Raleway">{innovativeDetails?.heading}</Heading>
   <Text color="#7d7b7b" fontWeight="400" fontSize="15px" mt="12px" >{innovativeDetails?.textFirst}</Text>
   
