@@ -23,8 +23,8 @@ import {
 import image from "./4.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import Reg from "../components/Registration/Reg";
-// import Login from "../components/Login/Login";
+import Reg from "../AuthComponent/Registration/Reg";
+import Login from "../AuthComponent/Login/Login";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./navbar.css"
@@ -38,10 +38,8 @@ export default function MainNavbar() {
   const { isOpen, onToggle } = useDisclosure();
   const toast=useToast()
   // const isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
-const isAdmin=true
 
   let token = JSON.parse(localStorage.getItem("token")) || null;
-
   const [page, setPage] = useState(false);
 
   // manage modal useDisclosure
@@ -51,13 +49,13 @@ const isAdmin=true
    
 
   const handleLogout = async () => {
-    try {
-      await axios.get(`${process.env.REACT_APP_URL}/user/logout`);
-      localStorage.removeItem("token");
-      openModal();
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   await axios.get(`${process.env.REACT_APP_URL}/user/logout`);
+    //   localStorage.removeItem("token");
+    //   openModal();
+    // } catch (err) {
+    //   console.log(err);
+    // }
   };
 
    const location = useLocation()
@@ -133,21 +131,7 @@ const isAdmin=true
         </Flex>
         {token && (
   <>
-    {/* {isAdmin ? (
-      <Box>
-        <Button
-          as="a"
-          href="/adminPage"
-          bgColor="white"
-          color="#4e8cf3"
-          variant="outline"
-          fontWeight="bold"
-          mr="7px"
-        >
-          Admin
-        </Button>
-      </Box>
-    ) : null} */}
+    
     {/* <Button
       bgColor="white"
       color="#4e8cf3"
@@ -159,7 +143,7 @@ const isAdmin=true
     </Button> */}
   </>
 )}
-{token && (
+{!token && (
   <Stack
     flex={{ base: 1, md: 0 }}
     justify="flex-end"
@@ -180,12 +164,11 @@ const isAdmin=true
       </Flex>
       {/* login modal */}
       <Modal size="4xl" isOpen={modalIsOpen} onClose={closeModal}>
-        {/* {page ? (
+        {page ? (
           <Reg page={page} setPage={setPage} />
-        ) : ( */}
-        <button>hbh</button>
-          {/* <Login onClose={closeModal} page={page} setPage={setPage} /> */}
-        {/* )} */}
+        ) : (
+          <Login onClose={closeModal} page={page} setPage={setPage} />
+        )}
       </Modal>
 
       <Collapse in={isOpen} animateOpacity>
