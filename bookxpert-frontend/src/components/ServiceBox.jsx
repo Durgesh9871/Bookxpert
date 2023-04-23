@@ -6,7 +6,7 @@ const ServiceBox = ({item}) => {
   return (
     // height="50px" p="5px"
     
-     <Box border="1px  blue"  width="250px" shadow="md" p="10px">
+     <Box border="1px  blue"  width="250px" shadow="md" p="10px" m={{base:"0px" , sm:"0px auto" , md:"0px" , lg:"0px" , xl:"0px" , "2xl" :"0px"}} >
         <Box display="flex" alignItems="center">
      <AiOutlineArrowRight  style={{fontSize:"20px"}}/>
      <Heading ml="25px" p="10px" color="#556273" _hover={{color:"#05a0e8" , cursor:"pointer"}} fontWeight="700" fontSize="20px">{item.heading}</Heading>

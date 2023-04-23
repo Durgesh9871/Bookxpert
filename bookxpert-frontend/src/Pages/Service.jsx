@@ -59,7 +59,7 @@ const Service = () => {
        
        {/*  services start from here ----------------- */}
       
-       <SimpleGrid  columns={3} spacing={10} mt="25px" >
+       <SimpleGrid  columns={{base:"1" , sm:"1" , md:"2" , lg:"3" , xl:"3" , "2xl" :"3"}} spacing={10} mt="25px" >
 
             {
                 serviceDetail.map((item , i)=>{
