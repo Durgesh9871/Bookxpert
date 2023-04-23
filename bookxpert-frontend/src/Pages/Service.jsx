@@ -53,7 +53,7 @@ const Service = () => {
     ]
 
   return (
-    <Box border="1px solid red" fontFamily="Poppins"  height="auto" width="80%" m="20px auto"  p="10px">
+    <Box  fontFamily="Poppins"  height="auto" width="80%" m="20px auto"  p="10px">
      <Heading fontWeight="400" color="#46484A" >Our Services</Heading>
     <Text color="#7d7b7b" fontWeight="400" fontSize="15px" mt="12px" >To make you stress free and comfortable to do your business and help you to maximize your returns</Text>
        
