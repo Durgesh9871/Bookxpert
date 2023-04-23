@@ -348,20 +348,6 @@ const NAV_ITEMS = [
   },
 
   {
-    label: "About Us",
-    children: [
-      {
-        label: "About",
-        href: "/about",
-      },
-      {
-        label: "Contact Us",
-        href: "/contact",
-      },
-    ],
-  },
-
-  {
     label: "Blogs",
     children: [
       {
@@ -377,6 +363,19 @@ const NAV_ITEMS = [
         label: "Our Services",
         href: "/services",
       }
+    ],
+  },
+  {
+    label: "About Us",
+    children: [
+      {
+        label: "About",
+        href: "/about",
+      },
+      {
+        label: "Contact Us",
+        href: "/contact",
+      },
     ],
   },
   
