@@ -33,6 +33,7 @@
 
   .left_col{
     background-image: url(../img/signup-right-image.png);
+    background-size: cover;
   }
 
   
