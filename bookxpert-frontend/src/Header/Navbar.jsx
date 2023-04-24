@@ -34,7 +34,7 @@ import "./navbar.css"
 
 export default function MainNavbar() {
   
-
+const location = useLocation()
   const { isOpen, onToggle } = useDisclosure();
 
   let token = JSON.parse(localStorage.getItem("token")) || null;
@@ -80,7 +80,7 @@ export default function MainNavbar() {
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
-        background={"#ffffff"}
+        background={(location.pathname == "/admin")? "#171923" : "#ffffff"}
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
@@ -99,7 +99,7 @@ export default function MainNavbar() {
         </Flex>
         <Flex justify={{ base: "center", md: "center" }}>
          
-        <a target={"_blank"} href="https://bookxpert.co.in/index.html#services">  <Image src={image} h="60px" w="85px" borderRadius={"5%"} border="2px  red" ></Image> </a>
+        <a target={"_blank"} href="https://bookxpert.co.in/index.html#services">  <Image src={image} h="45px" w="70px" borderRadius={"5%"} border="2px  red" ></Image> </a>
          
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "center" }}>
@@ -114,6 +114,18 @@ export default function MainNavbar() {
         </Flex>
         {token && (
   <>
+    <Button
+          as="a"
+          href="/admin"
+          bgColor="white"
+          color="#4e8cf3"
+          variant="outline"
+          fontWeight="bold"
+          mr="7px"
+        >
+          Admin
+        </Button>
+     
     
     <Button
       bgColor="white"

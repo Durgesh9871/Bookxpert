@@ -1,14 +1,17 @@
 import { Container, Heading, SimpleGrid, Stack  , Box , Text, Button} from '@chakra-ui/react'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 
 const Footer = () => {
+
+  const location = useLocation()
+
   return (
     <Box
-    bg={'gray.50'}
-    color={'gray.700'}>
+    bg={(location.pathname == "/admin") ? "#171923" :'gray.50'}
+    color={(location.pathname == "/admin") ? "grey" :'gray.700'}>
     <Container as={Stack} maxW={'6xl'} py={10}>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
         <Stack align={'flex-start'}>
