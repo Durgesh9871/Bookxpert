@@ -26,27 +26,27 @@ Functionality
 
 
 SignUp Page
-![SignUp page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/signup.png?raw=true)
+![SignUp page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/signup.png?raw=true)
 
-Login Page
-![Login page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/login.png?raw=true)
 
 Home page
 
-![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/Home0.png?raw=true)
-![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/home2.png?raw=true)
-![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/home3.png?raw=true)
+![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/homepage.png?raw=true)
+![homepage](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/offer.png?raw=true)
 
-Property page
+Admin page
 
-![Property page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/property.png?raw=true)
-![Property page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/pagination.png?raw=true)
+![Admin page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/admin.png?raw=true)
 
 
-Dashboard Page
-![Save  page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/Screenshot%20(148).png?raw=true) 
-![Customer Detail page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/detail.png?raw=true) 
+Blog Page
+![Blog  page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/blog.png?raw=true) 
+![Blog  page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/blog1.png?raw=true) 
 
 Contact
 
-![Contact page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Geniobits/contact.png?raw=true) 
+![Contact page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/contact.png?raw=true) 
+
+Services
+
+![Service page](https://github.com/Durgesh9871/ReadmeImages/blob/main/Bookxpert/services.png?raw=true) 
