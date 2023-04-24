@@ -78,8 +78,8 @@ console.log(userData ,"user")
           <Box className="left_col">
             <Box display={"flex"} flexDirection="column" gap={"10px"}>
               <Heading>Login</Heading>
-              <Text color={"black"} fontWeight="500">
-               Buy Real State Property
+              <Text  fontWeight="500">
+               Bookxpert
               </Text>
             </Box>
             <Box display="grid" alignItems={"end"}>
@@ -161,7 +161,7 @@ console.log(userData ,"user")
                 gap={1}
                 justifyContent="center"
               >
-                <Text color={'black'}>New to GenioBits?</Text>
+                <Text color={'black'}>New to Bookxpert?</Text>
                 <RouteLink to={"#"}>
                   <Text onClick={() => setPage(true)} _hover={{textDecoration:"underline"}}>Create an account</Text>
                 </RouteLink>

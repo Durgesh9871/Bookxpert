@@ -111,7 +111,7 @@ const handleSubmit = ()=>{
             alignItems={"center"}
           >
             <Box display={"flex"} flexDirection="column" gap={"10px"}>
-              <Heading>Looks like you're new here!</Heading>
+              {/* <Heading color="black" fontWeight="500">Looks like you're new here!</Heading> */}
               <Text color={"black"} fontWeight="500">
                 Sign up with your email address to get started
               </Text>
