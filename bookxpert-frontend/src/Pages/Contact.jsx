@@ -26,6 +26,37 @@ const handleForm = ()=>{
     text:state.text ,
     to:state.to 
   }
+
+  const config = {
+    Username : "durgeshsingh98718376@gmail.com",
+    Password : "CD6D1C4AC2419020FBA5B132368DC51CBEE0",
+    Host : "smtp.elasticemail.com",
+    Port:2525 , 
+    To : "devisingh9871686098@gmail.com" ,
+   From : state.to ,
+   Subject : "Bookxpert Team",
+   Body : state.text
+  }
+
+  if(window.Email){
+    window.Email.send(config).then(()=> 
+    toast({
+      title: 'Email Sent.',
+      position:"top" ,
+      description: "Email Sent Successfully",
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    })
+    ).then(()=> {
+      setState({
+        to:"" ,
+        from :"",
+        text:""
+      })
+    })
+  }
+
  
   
 }
