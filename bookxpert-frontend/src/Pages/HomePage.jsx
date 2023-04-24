@@ -13,12 +13,19 @@ import {Offer} from "../ComponentsHome/offer"
 import innovative from "../Images/innovative.jpg"
 import {useDispatch, useSelector} from "react-redux"
 import { getUserData } from '../Redux/Authentication/action'
+import { getMessegeData } from '../Redux/Messege/action'
 
 
 const HomePage = () => {
 
   // code for getting user data ------
   const dispatch = useDispatch()
+
+  const {userMessege} = useSelector((state)=>{
+    return {
+      userMessege:state.ReducerMessege.userMessege 
+    }
+  })
 
   const {userData} = useSelector((state)=>{
     return {
@@ -28,8 +35,10 @@ const HomePage = () => {
 
   useEffect(()=>{
       dispatch(getUserData)
+      dispatch(getMessegeData)
   },[])
   console.log("All user signin Data" ,userData)
+  console.log("messeges" ,userMessege)
 
   const myDot = ({isActive})=>{
     return ( <span
