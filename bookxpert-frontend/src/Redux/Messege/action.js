@@ -1,5 +1,4 @@
 
-import { useToast } from "@chakra-ui/react"
 import axios from "axios"
 
 
@@ -15,12 +14,7 @@ const getMessegeData = (dispatch)=>{
 const sendMessegeData =(body)=> (dispatch)=>{
     dispatch({type:"SEND_MESSEGE"})
     return axios.post(`https://ruby-tasty-crocodile.cyclic.app/mail` , body)
-    .then((res)=> useToast({ title: 'Messege Send.',
-    description: "Your messege is send successfully",
-    status: 'success',
-    position:"top" ,
-    duration: 3000,
-    isClosable: true,}))
+    .then((res)=> console.log("Messege sent in db"))
     .catch((err)=> console.log(err,"err"))
 }
 
