@@ -9,7 +9,7 @@ const Offer = () => {
     <Box border="2px  red" height="auto" width="90%" m="20px auto"  p="10px" backgroundImage={offer} color="#ffffff" >
 
     <Heading fontWeight="400"  fontFamily="Raleway" textAlign="center">What We Offer</Heading>
-<Text  fontWeight="400" fontSize="15px" mt="12px" textAlign="center">Our model is flexible enough to support individual needs and circumstances that you can outsource totally or partially.
+<Text  fontWeight="400" fontSize="15px" mt="12px" textAlign="center">Our model is flexible enough to support individual needs and circumstances that you can outsource totally or partially.</Text>
 
 {/* main section */}
 <Box width="100%" border="2px  black"  display="flex" p="10px" mt="10px"  flexDirection={{base:"column-reverse", sm: "column-reverse", md: "row", lg: "row",xl: "row",'2xl': "row"}}  >
@@ -18,18 +18,19 @@ const Offer = () => {
       <Img src={about} alt="about" width="auto" height={{base:"200px", sm: "350px", md: "300px", lg: "400px",xl: "400px",'2xl': "400px"}} />
  </Box>
 {/* details */}
+
 <Box border="1px  red" width={{base:"100%", sm: "100%", md: "50%", lg: "40%",xl: "40%",'2xl': "40%"}} p="15px" textAlign="left">
   <ul>
-    <li><Text  fontWeight="400" fontSize="15px" >For example you can generate sales in our application at your location and the rest can be outsourced;</Text></li>
-    <li>   <Text  fontWeight="400" fontSize="15px" mt="15px" >You can demand the deliveries required and their frequency.</Text></li>
-  <li>  <Text  fontWeight="400" fontSize="15px" mt="15px">You can get the reports you need in your mobile at your fingertips; and more.</Text></li>
- <li><Text  fontWeight="400" fontSize="15px" mt="15px">All of this without asking or waiting.</Text></li>
+    <li style={{ fontWeight:"400" , fontSize:"15px"}}>For example you can generate sales in our application at your location and the rest can be outsourced;</li>
+    <li style={{ fontWeight:"400" , fontSize:"15px" , marginTop:"15px"}} >     You can demand the deliveries required and their frequency.</li>
+  <li style={{ fontWeight:"400" , fontSize:"15px" , marginTop:"15px"}} >  You can get the reports you need in your mobile at your fingertips; and more</li>
+ <li style={{ fontWeight:"400" , fontSize:"15px" , marginTop:"15px"}}>All of this without asking or waiting.</li>
   </ul>
 </Box>
 
 </Box>
 
-</Text>
+
 
     </Box>
   )
