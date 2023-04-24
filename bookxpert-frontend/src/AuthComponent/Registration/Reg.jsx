@@ -86,17 +86,17 @@ const handleSubmit = ()=>{
   password: pwd,
   gender:gender
   }
-  dispatch(sendUserData(body))
-  toast({
-    position: "top",
-    title: "Sign Up Successful.",
-    description: "Congratulation you've successfully Signed Up.",
-    status: "success",
-    duration: 3000,
-    isClosable: true,
-    onCloseComplete: () => setPage(false),
-  });
-// console.log(name, email  , pwd , gender)
+  // dispatch(sendUserData(body))
+  // toast({
+  //   position: "top",
+  //   title: "Sign Up Successful.",
+  //   description: "Congratulation you've successfully Signed Up.",
+  //   status: "success",
+  //   duration: 3000,
+  //   isClosable: true,
+  //   onCloseComplete: () => setPage(false),
+  // });
+console.log(name, email  , pwd , gender)
 }
 
   return (

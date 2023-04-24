@@ -42,7 +42,6 @@ const Login = ({ setPage, onClose }) => {
         isError:state.ReducerAuth.isError
     }
 })
-console.log(userData ,"user")
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -50,13 +49,7 @@ console.log(userData ,"user")
   },[])
 
   const handleSubmit = ()=>{
-   let userArray =  userData.filter((ele , i)=>{
-      return ele.email == email && ele.password == pwd
-    })
-    if(userArray.length > 0){
-  
-      isLoginUser.push(...isLoginUser , true)
-         localStorage.setItem("isLoginUser" ,JSON.stringify(isLoginUser))
+    
       toast({
         position: "top",
         title: "Login Successful.",
@@ -66,7 +59,7 @@ console.log(userData ,"user")
         isClosable: true,
         onCloseComplete: () => onClose(),
       });
-    }
+  
   }
  
 
