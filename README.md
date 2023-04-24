@@ -1,7 +1,7 @@
 # Bookxpert 
 The business is led by a group of professionals from different fields and backgrounds who have the functional and technological experience. We're here to help MSMEs overcome their accounting and enforcement issues under different laws of the country.
 
- <h2> Kindly Check the deploy link ---> https://superb-alfajores-6b9ed9.netlify.app/   </h2>
+ <h2> Kindly Check the deploy link ---> https://bookxpert.vercel.app/   </h2>
 
 <h3> Project Presentation  ---> https://drive.google.com/file/d/1i0qDVMHhD_NoK6Bif9xrOdl_Dt998v6h/view?usp=sharing  </h3>
  
