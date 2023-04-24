@@ -29,6 +29,7 @@ import { ImCross } from "react-icons/im";
 import { FaCheck } from "react-icons/fa";
 import {useDispatch } from "react-redux"
 import { sendUserData } from "../../Redux/Authentication/action";
+import axios from "axios";
 
 
 const EMAIL_REGEX = /^[\w]+@([\w-]+\.)+[\w-]{3}$/g;
@@ -78,26 +79,38 @@ const Reg = ({ page, setPage }) => {
   }, [pwd, matchPwd]);
 
   
-  const dispatch = useDispatch()
-const handleSubmit = ()=>{
-  const body={
-  name:name , 
-  email:email  , 
-  password: pwd,
-  gender:gender
-  }
-  // dispatch(sendUserData(body))
-  // toast({
-  //   position: "top",
-  //   title: "Sign Up Successful.",
-  //   description: "Congratulation you've successfully Signed Up.",
-  //   status: "success",
-  //   duration: 3000,
-  //   isClosable: true,
-  //   onCloseComplete: () => setPage(false),
-  // });
-console.log(name, email  , pwd , gender)
-}
+  const handleSubmit = async () => {
+    setLoad(true);
+    try {
+      // logic for regester api
+      await axios.post(`https://ruby-tasty-crocodile.cyclic.app/users/register`, {
+        name,
+        email,
+        password: pwd,
+        gender,
+      });
+      setLoad(false);
+      toast({
+        position: "top",
+        title: "Sign Up Successful.",
+        description: "Congratulation you've successfully Signed Up.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+        onCloseComplete: () => setPage(false),
+      });
+    } catch (error) {
+      setLoad(false);
+      toast({
+        position: "top",
+        title: "Something Went Wrong",
+        description: `${error.code}`,
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    }
+  };
 
   return (
     <>

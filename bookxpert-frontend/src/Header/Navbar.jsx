@@ -21,7 +21,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import image from "./4.png";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import axios from "axios";
 import Reg from "../AuthComponent/Registration/Reg";
 import Login from "../AuthComponent/Login/Login";
@@ -36,8 +36,6 @@ export default function MainNavbar() {
   
 
   const { isOpen, onToggle } = useDisclosure();
-  const toast=useToast()
-  // const isAdmin = JSON.parse(localStorage.getItem("isAdmin"));
 
   let token = JSON.parse(localStorage.getItem("token")) || null;
   const [page, setPage] = useState(false);
@@ -49,31 +47,16 @@ export default function MainNavbar() {
    
 
   const handleLogout = async () => {
-    // try {
-    //   await axios.get(`${process.env.REACT_APP_URL}/user/logout`);
-    //   localStorage.removeItem("token");
-    //   openModal();
-    // } catch (err) {
-    //   console.log(err);
-    // }
+    try {
+      await axios.get(`https://ruby-tasty-crocodile.cyclic.app/users/logout`);
+      localStorage.removeItem("token");
+      openModal();
+    } catch (err) {
+      console.log(err);
+    }
   };
 
-   const location = useLocation()
  
-   const checking=()=>{
-    if(!token)
-    {
-      toast({
-        position: "top",
-        title: "Kindly Sign-In/Sign-UP first",
-        status: "warning",
-        duration: 3000,
-        isClosable: true,
-      })
-    }
-   }
-
-
   
 
   return (
@@ -132,7 +115,7 @@ export default function MainNavbar() {
         {token && (
   <>
     
-    {/* <Button
+    <Button
       bgColor="white"
       color="#4e8cf3"
       variant="outline"
@@ -140,7 +123,7 @@ export default function MainNavbar() {
       fontWeight="bold"
     >
       Logout
-    </Button> */}
+    </Button>
   </>
 )}
 {!token && (
@@ -182,7 +165,6 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-  const location = useLocation()
  
 // console.log(location ,"location")
 

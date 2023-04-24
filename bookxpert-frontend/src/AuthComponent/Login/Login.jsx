@@ -23,44 +23,72 @@ import { Link as RouteLink } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import FgLogo from '../img/fg-logo.png';
 import {useDispatch , useSelector} from "react-redux"
-import {getUserData} from "../../Redux/Authentication/action"
 
 
-const isLoginUser = JSON.parse(localStorage.getItem("isLoginUser")) || []
+
 const Login = ({ setPage, onClose }) => {
+  const [load, setLoad] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const toast = useToast();
 
-
-  const {loading , userData , isError} = useSelector((state)=>{
-    return {
-        loading:state.ReducerAuth.loading ,
-        userData:state.ReducerAuth.userData ,
-        isError:state.ReducerAuth.isError
-    }
-})
-  const dispatch = useDispatch()
-
-  useEffect(()=>{
-   dispatch(getUserData)
-  },[])
-
-  const handleSubmit = ()=>{
-    
+  
+  
+  const handleLogin = async () => {
+    setLoad(true);
+    try {
+      let res=await axios.post(`https://ruby-tasty-crocodile.cyclic.app/users/login`,{
+        email,
+        password:pwd
+      });
+      setLoad(false);
+      localStorage.setItem('token',JSON.stringify(res.data.token));
       toast({
         position: "top",
         title: "Login Successful.",
-        description: "Congratulation you've successfully Logged in.",
+        description: "Congratulation you've successfully Loged in.",
         status: "success",
         duration: 3000,
         isClosable: true,
         onCloseComplete: () => onClose(),
       });
-  
-  }
+    } catch (e) {
+      setLoad(false)
+      if (e.response.data === "Incorrect password") {
+        toast({
+          position: "top",
+          title: "Wrong Password",
+          description:
+            "Incorrect Password. Please try again or click on Forgot Password to reset it",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
+      } else if (e.response.data === "User not found") {
+        toast({
+          position: "top",
+          title: "Wrong Email",
+          description:
+            "Sorry, we couldn't find an account associated with that email.",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
+      } 
+      else {
+        toast({
+          position: "top",
+          title: "Something Went Wrong",
+          description: "Please fill in your email and password correctly.",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
+      }
+    }
+  };
  
 
   return  (
@@ -124,10 +152,11 @@ const Login = ({ setPage, onClose }) => {
                 <Box>
                   <Button
                     w={"100%"}
+                    isLoading={load}
                     loadingText="Logging in..."
                     colorScheme={"blue"}
                     variant={"solid"}
-                    onClick={handleSubmit}
+                    onClick={handleLogin}
                   >
                     Login
                   </Button>
