@@ -3,7 +3,7 @@ The business is led by a group of professionals from different fields and backgr
 
  <h2> Kindly Check the deploy link ---> https://bookxpert.vercel.app/   </h2>
 
-<h3> Project Presentation  ---> https://drive.google.com/file/d/1i0qDVMHhD_NoK6Bif9xrOdl_Dt998v6h/view?usp=sharing  </h3>
+<h3> Project Presentation  ---> https://drive.google.com/file/d/1seLRfCFRvVBRVAp9YnUc7pcAmhvZScTk/view?usp=sharing  </h3>
  
 Tech Stack 
 
