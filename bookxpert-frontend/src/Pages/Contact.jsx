@@ -27,8 +27,8 @@ const toast = useToast()
 
 const handleForm = ()=>{
   let obj = {
-    text:state.text ,
-    to:state.to 
+    email:state.text ,
+     messege:state.to 
   }
 
 dispatch(sendMessegeData(obj))
@@ -38,7 +38,7 @@ dispatch(sendMessegeData(obj))
     Password : "CD6D1C4AC2419020FBA5B132368DC51CBEE0",
     Host : "smtp.elasticemail.com",
     Port:2525 , 
-    To : "hr@bookxpert.co.in" ,
+    To : "devisingh9871686098@gmail.com" ,
    From : state.to ,
    Subject : "Bookxpert Team",
    Body : state.text
