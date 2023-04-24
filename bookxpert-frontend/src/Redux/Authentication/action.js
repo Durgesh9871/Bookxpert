@@ -18,14 +18,6 @@ const getUserData = (dispatch)=>{
    
 }
 
-const handleLogin = (body)=>(dispatch)=>{
-    dispatch({type:"LOGIN_DATA_LOADING"})
-    return axios.post(`` , body)
-    .then((res)=> dispatch({type:'LOGIN_DATA_SUCCESS'}))
-    .catch((err)=> dispatch({type:"LOGIN_DATA_FAILURE"}))
-
-}
 
 
-
-export {sendUserData ,getUserData ,handleLogin}
+export {sendUserData ,getUserData }

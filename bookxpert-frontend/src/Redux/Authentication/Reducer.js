@@ -6,9 +6,7 @@ const initialState = {
 
     isSignIn :false  , 
     isSignInError :false  , 
-
-    isLogin:false ,
-    loginError :false , 
+ 
 }
 
 const ReducerAuth = (oldstate=initialState , action)=>{
@@ -29,13 +27,6 @@ const ReducerAuth = (oldstate=initialState , action)=>{
 
         case "SEND_DATA_ERROR":
           return {...oldstate , isSignInError:true }
-
-      
-        case "LOGIN_DATA_SUCCESS":
-            return {...oldstate , isLogin:true } 
-  
-        case "LOGIN_DATA_FAILURE":
-            return {...oldstate , loginError:true }
           
         default:
             return oldstate
