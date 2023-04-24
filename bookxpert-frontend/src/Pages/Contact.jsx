@@ -1,6 +1,8 @@
 import { Box, Button, FormControl, Input, Textarea } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useToast } from '@chakra-ui/react'
+import { sendMessegeData } from '../Redux/Messege/action'
+import {useDispatch} from "react-redux"
 
 
 const Contact = () => {
@@ -9,6 +11,8 @@ const Contact = () => {
     from:"" ,
     text :"",
   })
+
+  const dispatch = useDispatch()
  
   const handleChange = (e)=>{
    const {name , value} = e.target 
@@ -26,6 +30,8 @@ const handleForm = ()=>{
     text:state.text ,
     to:state.to 
   }
+
+dispatch(sendMessegeData(obj))
 
   const config = {
     Username : "durgeshsingh98718376@gmail.com",

@@ -3,7 +3,7 @@ import thunk from "redux-thunk"
 import {ReducerAuth} from "./Authentication/Reducer"
 
 const rootReducer = combineReducers({
-    ReducerAuth
+    ReducerAuth , ReducerMessege
   });
 const store = legacy_createStore(rootReducer , applyMiddleware(thunk))
 
