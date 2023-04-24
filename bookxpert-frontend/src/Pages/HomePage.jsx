@@ -86,9 +86,9 @@ const HomePage = () => {
       <Carousel.Item>
         <img height="40%" src={slide2} />
       </Carousel.Item>
-      <Carousel.Item>
-        <img hright="40%" src={slide3} />
-      </Carousel.Item>
+      {/* <Carousel.Item>
+        <img height="40%" src={slide3} />
+      </Carousel.Item> */}
   
       {/* ... */}
     </Carousel>
