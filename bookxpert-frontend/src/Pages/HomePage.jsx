@@ -1,5 +1,5 @@
 import { Box  , Button, Heading, Text , Img} from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Carousel from 'better-react-carousel'
 import slide1 from "../Images/slide1.jpg"
 import slide2 from "../Images/slide2.jpg"
@@ -11,11 +11,25 @@ import { Aboutus } from '../ComponentsHome/aboutus'
 import { Innovative } from '../ComponentsHome/Innovative'
 import {Offer} from "../ComponentsHome/offer"
 import innovative from "../Images/innovative.jpg"
-
+import {useDispatch, useSelector} from "react-redux"
+import { getUserData } from '../Redux/Authentication/action'
 
 
 const HomePage = () => {
 
+  // code for getting user data ------
+  const dispatch = useDispatch()
+
+  const {userData} = useSelector((state)=>{
+    return {
+      userData:state.ReducerAuth.userData 
+    }
+  })
+
+  useEffect(()=>{
+      dispatch(getUserData)
+  },[])
+  console.log("All user signin Data" ,userData)
 
   const myDot = ({isActive})=>{
     return ( <span
